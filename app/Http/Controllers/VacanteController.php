@@ -31,25 +31,15 @@ class VacanteController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show( Vacante $vacante)
     {
         //
+        return view('vacantes.show', compact('vacante'));
     }
 
     /**
@@ -57,7 +47,7 @@ class VacanteController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     */      
+     */
     public function edit(Vacante $vacante)
     {
         $this->authorize('update', $vacante);
@@ -65,26 +55,4 @@ class VacanteController extends Controller
         return view('vacantes.edit', compact('vacante'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }
