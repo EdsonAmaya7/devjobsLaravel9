@@ -57,7 +57,7 @@ class VacanteController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     */
+     */      
     public function edit(Vacante $vacante)
     {
         $this->authorize('update', $vacante);
