@@ -55,7 +55,6 @@ class EditarVacante extends Component
             $datos['imagen'] = str_replace('public/vacantes','',$imagen);
         }
 
-
         //encontrar la vacante a editar
         $vacante = Vacante::find($this->vacante_id);
 

@@ -36,13 +36,8 @@
 
 @push('scripts')
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        //la segunda manera de escuchar por eventos en livewire
-        //wire:click="$emit('prueba', {{ $vacante->id }})"
-        // // Livewire.on('prueba', vacanteId => {
-        // //     alert(vacanteId)
-        // // })
-    </script>
+
+
     <script>
         Livewire.on('mostrarAlerta', vacanteId => {
             Swal.fire({
