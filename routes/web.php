@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\CandidatoController;
 use App\Http\Controllers\NotificacionController;
 use App\Http\Controllers\VacanteController;
+use App\Models\Candidato;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,6 +30,6 @@ Route::get('/vacantes/{vacante}', [VacanteController::class,'show'])->name('vaca
 
 Route::get('/notificaciones', NotificacionController::class)->middleware(['auth','verified','rol.reclutador'])->name('notificaciones');
 
-
+Route::get('/candidatos/{vacante}',[CandidatoController::class,'index'])->name('candidatos.index');
 
 require __DIR__.'/auth.php';
